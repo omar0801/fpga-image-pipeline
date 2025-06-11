@@ -37,24 +37,33 @@ This project explores:
 
 ---
 
-## 📸 Example Output
+## 📸 Visual Results
 
-> *Example visual comparisons of 64x64/256x256 images with different filters applied (simulated in Quartus & MATLAB)*
-
-| Filter  | Processed Image |
-|---------|------------------|
-| Blur    | ![Blur](images/blur.png) |
-| Outline | ![Outline](images/outline.png) |
-| Emboss  | ![Emboss](images/emboss.png) |
-| Sharpen | ![Sharpen](images/sharpen.png) |
+| Filter        | Output |
+|---------------|--------|
+| Original      | ![Original Image](images/original.png) |
+| Blur          | ![Blur](images/blur.png) |
+| Outline       | ![Outline](images/outline.png) |
+| Emboss        | ![Emboss](images/emboss.png) |
+| Sharpen       | ![Sharpen](images/sharpen.png) |
 
 ---
 
-## 🧠 Research Findings
+## ⚠️ Implementation Challenges
+
+Some errors occurred when trying to process larger images or run more complex designs in Quartus. These included:
+- Device limit errors (not enough I/O pins or memory)
+- ROM size and register overflow messages
+
+To solve this, the design was tested using smaller 64x64 images, which ran successfully. Future work could optimise resource usage or explore more powerful FPGA boards.
+
+---
+
+## 🧠 Research Highlights
 
 - **Performance:** FPGAs are up to 5–10× faster than CPUs for specific image tasks
-- **Concurrency:** Dual-kernel implementation allows simultaneous memory and compute access
-- **Applications:** Suitable for real-time systems like medical imaging, autonomous driving, and surveillance
+- **Concurrency:** Dual-kernel implementation enables real-time filtering
+- **Applications:** Ideal for medical imaging, video surveillance, and autonomous vehicles
 
 ---
 
@@ -66,5 +75,4 @@ This work was completed as part of the BEng (Hons) Electrical & Electronic Engin
 
 ## 📄 Report Access
 
-This repository contains a summary version of the academic project report only. For the full report or Verilog source code, contact the author.
-
+This repository serves as a report showcase. For source code, testbenches, or full documentation, please contact the author directly.
