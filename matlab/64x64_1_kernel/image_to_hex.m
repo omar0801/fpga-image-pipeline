@@ -1,21 +1,25 @@
-% Load the image (already grayscale and 64x64)
-image = imread('../../images/64x64.jpg');
+% Load the image from your images folder
+img = imread('../../images/64x64.jpg');
 
-% Convert image to double (if not already)
-image = double(image);
+% Ensure the image is exactly 64×64 (resize if necessary)
+if size(img,1)~=64 || size(img,2)~=64
+    img = imresize(img, [64 64]);
+end
 
-% Reshape the 64x64 matrix into a 1D column vector
-image_vector = reshape(image, [], 1);
+% Convert to double precision
+img = double(img);
 
-% Convert the pixel values to 2-digit hexadecimal
-hex_values = arrayfun(@(x) dec2hex(round(x), 2), image_vector, 'UniformOutput', false);
+% Reshape the 64×64 (×channels) array into a 1-D column vector.
+% If your image is RGB, this will be 64*64*3×1; for grayscale, 64*64×1.
+img_vector = reshape(img, [], 1);
 
-% Convert cell array to string array
-hex_values = string(hex_values);
+% Convert each value to a 2-digit hexadecimal string
+hex_values = arrayfun(@(x) dec2hex(round(x), 2), img_vector, 'UniformOutput', false);
 
-% Save the hex values to a text file
-fileID = fopen('../../quartus/64x64_1_kernel/image_rom.txt', 'w');
-fprintf(fileID, '%s\n', hex_values);
-fclose(fileID);
+% Write out to the Quartus/ModelSim ROM file
+out_path = '../../quartus/64x64_1_kernel/simulation/modelsim/image_rom.txt';
+fid = fopen(out_path, 'w');
+fprintf(fid, '%s\n', hex_values{:});
+fclose(fid);
 
-disp('Hex values saved to image_rom.txt');
+disp(['Hex values saved to ', out_path]);
