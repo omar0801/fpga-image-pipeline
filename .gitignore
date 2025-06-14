@@ -50,7 +50,6 @@ quartus/**/simulation/modelsim/_temp*
 quartus/**/msim_transcript
 quartus/**/timing_log.txt
 *dual*.v
-image_rom.txt
 data.txt
-*image_rom*.txt
 *data*.txt
+quartus/**/simulation/**/image_rom.txt
