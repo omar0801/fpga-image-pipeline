@@ -1,0 +1,68 @@
+# === Source Files ===
+!*.v
+!*.sv
+!*.qpf
+!*.qsf
+!*.do
+!*.txt
+!*.sdc
+
+# === Ignore All Generated Output ===
+*.rpt
+*.smsg
+*.summary
+*.done
+*.pof
+*.sof
+*.jdi
+*.pin
+*.sld
+*.qmsg
+*.log
+*.html
+*.mif
+*.wlf
+*.rdb
+*.cdb
+*.hdb
+*.ddb
+*.tdb
+*.kpt
+*.qdb
+*.qpg
+*.qtl
+*.bak*
+*.flock
+*.sig
+*.ammdb
+*.xml
+*.reg_db.*
+*.transcript
+*.ini
+*.qws
+*.qdf
+
+# === Ignore simulation build dirs ===
+quartus/**/db/
+quartus/**/incremental_db/
+quartus/**/output_files/
+quartus/**/simulation/modelsim/rtl_work/
+quartus/**/simulation/modelsim/*.wlf
+quartus/**/simulation/modelsim/*_bak*
+quartus/**/simulation/modelsim/_opt*
+quartus/**/simulation/modelsim/_temp*
+quartus/**/msim_transcript
+quartus/**/timing_log.txt
+
+# === Ignore temporary / duplicated testbench files ===
+*dual*.v
+
+# Ignore ROM and data files (auto-generated)
+image_rom.v
+image_rom.txt
+data.txt
+
+# Also ignore any ROM variants (if they sneak in)
+*image_rom*.v
+*image_rom*.txt
+*data*.txt
