@@ -64,10 +64,10 @@ set_global_assignment -name VERILOG_FILE kernel_ops.v
 set_global_assignment -name VERILOG_FILE kernel_mem_fetch.v
 set_global_assignment -name VERILOG_FILE kernel_3x3.v
 set_global_assignment -name VERILOG_FILE image_rom.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
 set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_kernel_ops -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME tb_kernel_ops -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME DUT -section_id tb_kernel_ops
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_kernel_ops -section_id tb_kernel_ops
 set_global_assignment -name EDA_TEST_BENCH_FILE tb_kernel_ops.v -section_id tb_kernel_ops
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
