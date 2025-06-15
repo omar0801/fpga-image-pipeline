@@ -1,5 +1,5 @@
 % Name of the text file containing the 1D array of hexadecimal values
-filename = '../../quartus/64x64_1_kernel/simulation/modelsim/data.txt';
+filename = 'quartus/64x64_1_kernel/simulation/modelsim/data.txt';
 
 % Read the data from the text file as a cell array of strings
 fid = fopen(filename, 'r');

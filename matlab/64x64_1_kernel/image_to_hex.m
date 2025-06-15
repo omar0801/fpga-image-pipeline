@@ -1,5 +1,5 @@
 % Load the image from your images folder
-img = imread('../../images/64x64.jpg');
+img = imread('images/64x64.jpg');
 
 % Ensure the image is exactly 64×64 (resize if necessary)
 if size(img,1)~=64 || size(img,2)~=64
@@ -17,7 +17,7 @@ img_vector = reshape(img, [], 1);
 hex_values = arrayfun(@(x) dec2hex(round(x), 2), img_vector, 'UniformOutput', false);
 
 % Write out to the Quartus/ModelSim ROM file
-out_path = '../../quartus/64x64_1_kernel/simulation/modelsim/image_rom.txt';
+out_path = 'quartus/64x64_1_kernel/simulation/modelsim/image_rom.txt';
 fid = fopen(out_path, 'w');
 fprintf(fid, '%s\n', hex_values{:});
 fclose(fid);
