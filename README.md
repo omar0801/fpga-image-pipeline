@@ -27,8 +27,6 @@ matlab/
 images/
 ├── 64x64.jpg             # Example input image (resized)
 └── 256x256.jpg           # Larger image used in advanced test
-
-README.md                 # You're reading it
 ```
 
 Each Quartus folder has the `.qpf` project file, Verilog modules, testbenches, and simulation outputs.
