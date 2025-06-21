@@ -4,11 +4,10 @@ This is my final-year engineering project that focuses on speeding up image proc
 
 ## What's Inside
 
-- `quartus/` – All the Quartus projects by image size and kernel setup (64x64, 256x256, dual kernel, etc.)
+- `quartus/` – All the Quartus projects by image sise and kernel setup (64x64, 256x256, dual kernel, etc.)
 - `matlab/` – MATLAB scripts for converting images to hex and back for all cases
 - `images/` – Sample images used in the project
-- `README.md` – This file
-
+  
 ## Project Structure
 
 ```text
@@ -25,7 +24,7 @@ matlab/
 └── 256x256/              # Handles larger 256x256 image and output
 
 images/
-├── 64x64.jpg             # Example input image (resized)
+├── 64x64.jpg             # Example input image 
 └── 256x256.jpg           # Larger image used in advanced test
 ```
 
@@ -42,7 +41,7 @@ Each Quartus folder has the `.qpf` project file, Verilog modules, testbenches, a
 
 Here’s a quick look at one of the original input images and a processed result:
 
-- `images/64x64.jpg` – Original resized image
+- `images/64x64.jpg` – Original resised image
 - `images/256x256.jpg` – One of the processed outputs
 
 ## Notes
@@ -53,4 +52,4 @@ If you want to test this yourself, each folder is set up to run on its own.
 
 ---
 
-Made by Omar Barouni – BEng Electrical & Electronic Engineering
+Made by Omar Barouni – BEng Electrical and Electronic Engineering
