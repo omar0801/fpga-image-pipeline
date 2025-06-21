@@ -19,10 +19,16 @@ quartus/
 └── 256x256/              # Large image multiplexer project
 
 matlab/
-├── 64x64_1_kernel/
-├── 64x64_2_kernel/
-├── 64x64_split/
-└── 256x256/
+├── 64x64_1_kernel/       # Reads 64x64 output and displays image
+├── 64x64_2_kernel/       # Merges two outputs from dual kernels
+├── 64x64_split/          # Keeps each kernel's result separate
+└── 256x256/              # Handles larger 256x256 image and output
+
+images/
+├── 64x64.jpg             # Example input image (resized)
+└── 256x256.jpg           # Larger image used in advanced test
+
+README.md                 # You're reading it
 ```
 
 Each Quartus folder has the `.qpf` project file, Verilog modules, testbenches, and simulation outputs.
