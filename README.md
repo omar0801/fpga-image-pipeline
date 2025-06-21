@@ -39,10 +39,10 @@ Each Quartus folder has the `.qpf` project file, Verilog modules, testbenches, a
 
 ## Images
 
-Here’s a quick look at one of the original input images and a processed result:
+The images in the `images/` folder are used as inputs for MATLAB. They get converted into hexadecimal values and written to ROM files used by the Quartus simulations. These are not output images — the actual output is viewed in MATLAB after the simulation.
 
-- `images/64x64.jpg` – Original resised image
-- `images/256x256.jpg` – One of the processed outputs
+- [images/64x64.jpg](images/64x64.jpg) – Input image for 64×64 projects  
+- [images/256x256.jpg](images/256x256.jpg) – Input image for 256×256 project
 
 ## Notes
 
